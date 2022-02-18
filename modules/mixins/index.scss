@@ -1,0 +1,35 @@
+@mixin desktop {
+  @media screen and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+@mixin phones-small {
+  @media screen and (max-width: $phones-small) {
+    @content;
+  }
+}
+
+@mixin font-style-roboto($weight:400) {
+  font-family: 'Roboto', sans-serif;
+  font-weight: $weight;
+  font-style: normal;
+}
