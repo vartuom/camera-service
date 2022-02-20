@@ -1,0 +1,20 @@
+@use '../mixins/mixins';
+@use '../variables/colors';
+
+.logo {
+  margin: 0;
+  @include mixins.font-style-roboto();
+  font-size: 20px;
+  line-height: 1.4;
+  color: colors.$text-primary;
+  @include mixins.flex(16px);
+  &:after {
+    color: colors.$primary;
+    font-size: 12px;
+    line-height: 1;
+    content: 'мы открылись';
+    background-color: colors.$accent;
+    padding: 4px 8px;
+    @include mixins.rounded-block(4px);
+  }
+}

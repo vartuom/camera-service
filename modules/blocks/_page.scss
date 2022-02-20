@@ -1,0 +1,5 @@
+@use '../variables/colors';
+
+.page {
+  background-color: colors.$primary;
+}

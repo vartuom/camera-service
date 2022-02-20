@@ -1,0 +1,18 @@
+@use '../mixins/mixins';
+@use '../variables/colors';
+
+.lead {
+  color: colors.$text-primary;
+  &__header {
+    @include mixins.font-style-roboto();
+    margin: 0;
+    font-size: 50px;
+    line-height: 1.2;
+  }
+  &__paragraph {
+    @include mixins.font-style-roboto();
+    margin: 10px 0 0;
+    font-size: 30px;
+    line-height: 1.3;
+  }
+}
