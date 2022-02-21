@@ -2,9 +2,9 @@
 @use '../variables/colors';
 
 .mail-form {
-  display: grid;
   color: colors.$text-primary;
   @include mixins.font-style-roboto();
+  @include mixins.flex(10px, column, $align: flex-start);
   &__field {
     margin: 0;
     border: 0;
@@ -12,6 +12,7 @@
     border-radius: 10px;
     overflow: hidden;
     height: 50px;
+    width: 100%;
     @include mixins.flex();
   }
   &__input {

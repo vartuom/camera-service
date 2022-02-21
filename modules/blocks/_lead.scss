@@ -3,15 +3,15 @@
 
 .lead {
   color: colors.$text-primary;
+  @include mixins.font-style-roboto();
   &__header {
-    @include mixins.font-style-roboto();
     margin: 0;
     font-size: 50px;
     line-height: 1.2;
+    font-weight: inherit;
   }
   &__paragraph {
-    @include mixins.font-style-roboto();
-    margin: 10px 0 0;
+    margin: 10px 0 260px;
     font-size: 30px;
     line-height: 1.3;
   }

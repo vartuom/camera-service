@@ -82,7 +82,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -357,7 +358,6 @@ template {
   height: 100vh;
   display: grid;
   margin: 0 auto;
-  border: white dashed 1px;
   padding: 24px 20px 20px;
   box-sizing: border-box;
   grid-template-areas: "header" "content" "footer";
@@ -375,6 +375,7 @@ template {
   justify-content: flex-start;
   align-items: center;
   gap: 16px;
+  flex-direction: row;
 }
 .logo:after {
   color: #000000;
@@ -389,30 +390,32 @@ template {
 
 .lead {
   color: #ffffff;
-}
-.lead__header {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+.lead__header {
   margin: 0;
   font-size: 50px;
   line-height: 1.2;
+  font-weight: inherit;
 }
 .lead__paragraph {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin: 10px 0 0;
+  margin: 10px 0 260px;
   font-size: 30px;
   line-height: 1.3;
 }
 
 .mail-form {
-  display: grid;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  flex-direction: column;
 }
 .mail-form__field {
   margin: 0;
@@ -421,10 +424,12 @@ template {
   border-radius: 10px;
   overflow: hidden;
   height: 50px;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 0;
+  flex-direction: row;
 }
 .mail-form__input {
   height: 100%;
@@ -458,4 +463,26 @@ template {
   line-height: 1.5;
 }
 
-/*# sourceMappingURL=index.css.map */
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.photo-grid::before {
+  content: "";
+  display: block;
+  background-color: #FFD233;
+  height: 100px;
+  width: 100px;
+}
+.photo-grid__image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.photo-grid__image_place_top::after {
+  content: "";
+  background-color: #FFD233;
+  height: 100px;
+  width: 100%;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,22 @@
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  &::before {
+    content: '';
+    display: block;
+    background-color: #FFD233;
+    height: 100px;
+    width: 100px;
+  }
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    &_place {
+      &_top {
+
+        }
+      }
+    }
+  }
+}

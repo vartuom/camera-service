@@ -34,11 +34,12 @@
   font-style: normal;
 }
 
-@mixin flex($gap:0, $justify:flex-start, $align:center) {
+@mixin flex($gap:0, $direction:row, $justify:flex-start, $align:center) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
   gap: $gap;
+  flex-direction: $direction;
 }
 
 @mixin rounded-block($r:0) {
