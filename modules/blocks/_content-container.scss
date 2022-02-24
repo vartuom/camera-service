@@ -1,0 +1,28 @@
+@use '../mixins/mixins';
+@use '../variables/colors';
+
+.content-container {
+  padding: 40px 0 30px;
+  @include mixins.font-style-roboto();
+  &__header {
+    margin: 0;
+    font-weight: inherit;
+    color: colors.$text-primary;
+    font-size: 12px;
+    line-height: 1.5;
+    &_place {
+      &_top {
+        margin-bottom: 40px;
+      }
+      &_bottom {
+        margin-top: 20px;
+      }
+    }
+  }
+  &__paragraph {
+    margin: 0;
+    color: colors.$text-secondary;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
