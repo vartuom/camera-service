@@ -5,6 +5,7 @@
   padding: 30px 0 20px;
   @include mixins.flex(184px, column, space-between, flex-start);
   &__wrapper {
+    width: 100%;
     @include mixins.flex(40px, column, space-between, flex-start);
   }
   &__copyright {
@@ -17,5 +18,9 @@
   @include mixins.tablets {
     padding: 60px 0;
   }
-
+  @include mixins.desktop-wide {
+    &__copyright {
+      align-self: flex-end;
+    }
+  }
 }

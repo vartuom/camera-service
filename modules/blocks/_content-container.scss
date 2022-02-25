@@ -61,4 +61,12 @@
       line-height: 1.7;
     }
   }
+  @include mixins.desktop-wide {
+    &:last-child {
+      padding-bottom: 240px;
+    }
+    &__button {
+      margin: 50px 0;
+    }
+  }
 }

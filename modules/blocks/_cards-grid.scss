@@ -24,4 +24,14 @@
       }
     }
   }
+  @include mixins.desktop-wide {
+    &_size {
+      &_s {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      &_m {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
 }

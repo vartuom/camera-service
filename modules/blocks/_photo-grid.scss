@@ -39,6 +39,18 @@
       }
     }
   }
+  @include mixins.desktop-wide {
+    margin: 0 -130px;
+    &_place {
+      &_top {
+        padding: 60px 0 20px;
+      }
+      &_bottom {
+        padding: 0 0 60px;
+        grid-template-columns: 1fr 730px;
+      }
+    }
+  }
 }
 
 

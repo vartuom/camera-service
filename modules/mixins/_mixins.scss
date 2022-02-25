@@ -1,5 +1,11 @@
 @use '../variables/media';
 
+@mixin desktop-wide {
+  @media screen and (min-width: media.$desktop-wide) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media screen and (min-width: media.$desktop) {
     @content;

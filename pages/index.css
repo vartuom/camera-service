@@ -82,8 +82,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -355,6 +354,7 @@ template {
 
 .root {
   width: 100%;
+  max-width: 1440px;
   height: 100vh;
   display: grid;
   margin: 0 auto;
@@ -365,6 +365,11 @@ template {
 @media screen and (min-width: 768px) {
   .root {
     padding: 60px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .root {
+    padding: 60px 160px;
   }
 }
 
@@ -436,6 +441,20 @@ template {
     line-height: 1.3;
   }
 }
+@media screen and (min-width: 1440px) {
+  .lead {
+    padding: 60px 0;
+  }
+  .lead__header {
+    font-size: 112px;
+    line-height: 1;
+  }
+  .lead__paragraph {
+    margin: 20px 0 230px;
+    font-size: 80px;
+    line-height: 1;
+  }
+}
 
 .mail-form {
   color: #ffffff;
@@ -492,6 +511,9 @@ template {
   line-height: 1.5;
 }
 @media screen and (min-width: 768px) {
+  .mail-form__field {
+    min-width: 569px;
+  }
   .mail-form__button {
     min-width: 221px;
     font-size: 14px;
@@ -502,6 +524,11 @@ template {
   }
   .mail-form__button_active:before {
     content: "Круто, спасибо за доверие!";
+  }
+}
+@media screen and (min-width: 1440px) {
+  .mail-form__field {
+    width: auto;
   }
 }
 
@@ -532,8 +559,7 @@ template {
 }
 .photo-grid__image {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -543,6 +569,18 @@ template {
   }
   .photo-grid_place_bottom {
     grid-template-columns: 1fr 455px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .photo-grid {
+    margin: 0 -130px;
+  }
+  .photo-grid_place_top {
+    padding: 60px 0 20px;
+  }
+  .photo-grid_place_bottom {
+    padding: 0 0 60px;
+    grid-template-columns: 1fr 730px;
   }
 }
 
@@ -565,6 +603,14 @@ template {
   }
   .cards-grid_size_m {
     grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .cards-grid_size_s {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .cards-grid_size_m {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -630,8 +676,6 @@ template {
   align-items: flex-start;
   gap: 0;
   flex-direction: column;
-  height: -webkit-min-content;
-  height: -moz-min-content;
   height: min-content;
 }
 .card__price {
@@ -738,6 +782,14 @@ template {
     line-height: 1.7;
   }
 }
+@media screen and (min-width: 1440px) {
+  .content-container:last-child {
+    padding-bottom: 240px;
+  }
+  .content-container__button {
+    margin: 50px 0;
+  }
+}
 
 .footer {
   padding: 30px 0 20px;
@@ -748,6 +800,7 @@ template {
   flex-direction: column;
 }
 .footer__wrapper {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -767,4 +820,11 @@ template {
   .footer {
     padding: 60px 0;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+@media screen and (min-width: 1440px) {
+  .footer__copyright {
+    align-self: flex-end;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
