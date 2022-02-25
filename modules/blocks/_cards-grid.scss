@@ -1,3 +1,5 @@
+@use '../mixins/mixins';
+
 .cards-grid {
   list-style: none;
   padding: 0;
@@ -10,6 +12,16 @@
     }
     &_m {
       grid-template-columns: 1fr;
+    }
+  }
+  @include mixins.tablets {
+    &_size {
+      &_s {
+        grid-template-columns: 1fr 1fr;
+      }
+      &_m {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }

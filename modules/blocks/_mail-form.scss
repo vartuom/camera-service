@@ -46,4 +46,19 @@
     font-size: 12px;
     line-height: 1.5;
   }
+  @include mixins.tablets {
+    &__button {
+      min-width: 221px;
+      font-size: 14px;
+      line-height: 1.7;
+      &:before {
+        content: 'Отремонтируйте камеру \270C';
+      }
+      &_active {
+        &:before {
+          content: 'Круто, спасибо за доверие!';
+        }
+      }
+    }
+  }
 }

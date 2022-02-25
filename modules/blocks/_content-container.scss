@@ -27,6 +27,7 @@
   }
   &__button {
     width: 100%;
+    max-width: 306px;
     margin: 10px 0 30px;
     min-height: 50px;
     padding: 16px;
@@ -37,5 +38,27 @@
   &:last-child {
     padding-bottom: 180px;
     border-bottom: 2px solid #151515;
+  }
+  @include mixins.tablets {
+    padding: 60px 0;
+    &:last-child {
+      padding-bottom: 210px;
+    }
+    &__header {
+      font-size: 20px;
+      &_place {
+        &_bottom {
+          margin-top: 60px;
+        }
+      }
+    }
+    &__paragraph {
+      font-size: 20px;
+    }
+    &__button {
+      margin: 40px 0;
+      font-size: 14px;
+      line-height: 1.7;
+    }
   }
 }

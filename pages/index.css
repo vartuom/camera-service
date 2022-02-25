@@ -82,7 +82,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -361,6 +362,11 @@ template {
   box-sizing: border-box;
   grid-template-areas: "header" "content" "footer";
 }
+@media screen and (min-width: 768px) {
+  .root {
+    padding: 60px;
+  }
+}
 
 .button {
   font-family: "Roboto", sans-serif;
@@ -415,6 +421,20 @@ template {
   margin: 10px 0 260px;
   font-size: 30px;
   line-height: 1.3;
+}
+@media screen and (min-width: 768px) {
+  .lead {
+    padding: 70px 0 32px;
+  }
+  .lead__header {
+    font-size: 70px;
+    line-height: 1.3;
+  }
+  .lead__paragraph {
+    margin: 0 0 470px;
+    font-size: 50px;
+    line-height: 1.3;
+  }
 }
 
 .mail-form {
@@ -471,40 +491,59 @@ template {
   font-size: 12px;
   line-height: 1.5;
 }
+@media screen and (min-width: 768px) {
+  .mail-form__button {
+    min-width: 221px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .mail-form__button:before {
+    content: "Отремонтируйте камеру ✌";
+  }
+  .mail-form__button_active:before {
+    content: "Круто, спасибо за доверие!";
+  }
+}
 
 .photo-grid {
-  padding: 20px 0;
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
-.photo-grid::before {
+.photo-grid_place_top {
+  padding: 20px 0;
+}
+.photo-grid_place_top::after {
   content: "";
   background-color: #FFD233;
   min-height: 67px;
   border-radius: 4px;
   overflow: hidden;
-  order: 2;
 }
-.photo-grid::after {
+.photo-grid_place_bottom {
+  padding: 0;
+}
+.photo-grid_place_bottom::before {
   content: "";
   background-color: #25E197;
   min-height: 124px;
   border-radius: 4px;
   overflow: hidden;
-  order: 3;
 }
 .photo-grid__image {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 4px;
   overflow: hidden;
 }
-.photo-grid__image_place_top {
-  order: 1;
-}
-.photo-grid__image_place_bottom {
-  order: 4;
+@media screen and (min-width: 768px) {
+  .photo-grid_place_top {
+    grid-template-columns: 448px 1fr;
+  }
+  .photo-grid_place_bottom {
+    grid-template-columns: 1fr 455px;
+  }
 }
 
 .cards-grid {
@@ -519,6 +558,14 @@ template {
 }
 .cards-grid_size_m {
   grid-template-columns: 1fr;
+}
+@media screen and (min-width: 768px) {
+  .cards-grid_size_s {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cards-grid_size_m {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
@@ -583,6 +630,8 @@ template {
   align-items: flex-start;
   gap: 0;
   flex-direction: column;
+  height: -webkit-min-content;
+  height: -moz-min-content;
   height: min-content;
 }
 .card__price {
@@ -591,6 +640,40 @@ template {
   position: absolute;
   left: 20px;
   bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .card_size_s {
+    min-height: 153px;
+  }
+  .card_size_m {
+    min-height: 364px;
+    padding: 40px 40px 45px;
+  }
+  .card__subheader {
+    margin: 0 0 20px;
+  }
+  .card__header_size_s {
+    font-size: 18px;
+    line-height: 1;
+    margin: 0 0 38px;
+  }
+  .card__header_size_m {
+    font-size: 32px;
+    line-height: 1;
+    margin: 0 0 40px;
+  }
+  .card__paragraph_size_s {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+  .card__paragraph_size_m {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .card__price {
+    font-size: 14px;
+    line-height: 1;
+  }
 }
 
 .content-container {
@@ -620,6 +703,7 @@ template {
 }
 .content-container__button {
   width: 100%;
+  max-width: 306px;
   margin: 10px 0 30px;
   min-height: 50px;
   padding: 16px;
@@ -631,6 +715,28 @@ template {
 .content-container:last-child {
   padding-bottom: 180px;
   border-bottom: 2px solid #151515;
+}
+@media screen and (min-width: 768px) {
+  .content-container {
+    padding: 60px 0;
+  }
+  .content-container:last-child {
+    padding-bottom: 210px;
+  }
+  .content-container__header {
+    font-size: 20px;
+  }
+  .content-container__header_place_bottom {
+    margin-top: 60px;
+  }
+  .content-container__paragraph {
+    font-size: 20px;
+  }
+  .content-container__button {
+    margin: 40px 0;
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 .footer {
@@ -657,5 +763,8 @@ template {
   font-size: 12px;
   line-height: 1.5;
 }
-
-/*# sourceMappingURL=index.css.map */
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 60px 0;
+  }
+}/*# sourceMappingURL=index.css.map */
