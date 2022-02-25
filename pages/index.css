@@ -362,6 +362,17 @@ template {
   grid-template-areas: "header" "content" "footer";
 }
 
+.button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #47474C;
+  padding: 0;
+  border: 0;
+  color: #ffffff;
+  text-align: center;
+}
+
 .logo {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -443,12 +454,10 @@ template {
   background-color: #232327;
 }
 .mail-form__button {
-  background-color: #47474C;
+  font-size: 10px;
+  line-height: 1;
   height: 100%;
   min-width: 50px;
-  padding: 0;
-  border: 0;
-  color: inherit;
 }
 .mail-form__button:before {
   content: "✌";
@@ -496,32 +505,6 @@ template {
 }
 .photo-grid__image_place_bottom {
   order: 4;
-}
-
-.content-container {
-  padding: 40px 0 30px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.content-container__header {
-  margin: 0;
-  font-weight: inherit;
-  color: #ffffff;
-  font-size: 12px;
-  line-height: 1.5;
-}
-.content-container__header_place_top {
-  margin-bottom: 40px;
-}
-.content-container__header_place_bottom {
-  margin-top: 20px;
-}
-.content-container__paragraph {
-  margin: 0;
-  color: #8e8e98;
-  font-size: 12px;
-  line-height: 1.5;
 }
 
 .cards-grid {
@@ -608,6 +591,71 @@ template {
   position: absolute;
   left: 20px;
   bottom: 20px;
+}
+
+.content-container {
+  padding: 40px 0 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.content-container__header {
+  margin: 0;
+  font-weight: inherit;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.content-container__header_place_top {
+  margin-bottom: 40px;
+}
+.content-container__header_place_bottom {
+  margin-top: 20px;
+}
+.content-container__paragraph {
+  margin: 0;
+  color: #8e8e98;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.content-container__button {
+  width: 100%;
+  margin: 10px 0 30px;
+  min-height: 50px;
+  padding: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.content-container:last-child {
+  padding-bottom: 180px;
+  border-bottom: 2px solid #151515;
+}
+
+.footer {
+  padding: 30px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 184px;
+  flex-direction: column;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-direction: column;
+}
+.footer__copyright {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #47474C;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=index.css.map */

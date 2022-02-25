@@ -1,0 +1,17 @@
+@use '../mixins/mixins';
+@use '../variables/colors';
+
+.footer {
+  padding: 30px 0 20px;
+  @include mixins.flex(184px, column, space-between, flex-start);
+  &__wrapper {
+    @include mixins.flex(40px, column, space-between, flex-start);
+  }
+  &__copyright {
+    margin: 0;
+    @include mixins.font-style-roboto();
+    color: colors.$button;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}

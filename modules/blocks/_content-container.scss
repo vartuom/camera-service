@@ -25,4 +25,17 @@
     font-size: 12px;
     line-height: 1.5;
   }
+  &__button {
+    width: 100%;
+    margin: 10px 0 30px;
+    min-height: 50px;
+    padding: 16px;
+    @include mixins.rounded-block(8px);
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  &:last-child {
+    padding-bottom: 180px;
+    border-bottom: 2px solid #151515;
+  }
 }
