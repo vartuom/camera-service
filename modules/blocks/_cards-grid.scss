@@ -9,27 +9,19 @@
   &_size {
     &_s {
       grid-template-columns: 1fr;
+      @include mixins.tablets {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include mixins.desktop-wide {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
     }
     &_m {
       grid-template-columns: 1fr;
-    }
-  }
-  @include mixins.tablets {
-    &_size {
-      &_s {
-        grid-template-columns: 1fr 1fr;
-      }
-      &_m {
+      @include mixins.tablets {
         grid-template-columns: 1fr;
       }
-    }
-  }
-  @include mixins.desktop-wide {
-    &_size {
-      &_s {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-      }
-      &_m {
+      @include mixins.desktop-wide {
         grid-template-columns: 1fr 1fr;
       }
     }

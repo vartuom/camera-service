@@ -4,23 +4,46 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+  @include mixins.desktop-wide {
+    margin: 0 -130px;
+  }
   &_place {
     &_top {
       padding: 20px 0;
+      @include mixins.tablets {
+        grid-template-columns: 448px 1fr;
+      }
+      @include mixins.desktop-wide {
+        padding: 60px 0 20px;
+      }
       &::after {
         content: '';
         background-color: #FFD233;
         min-height: 67px;
         @include mixins.rounded-block(4px);
+        @include mixins.tablets {
+          @include mixins.rounded-block(10px);
+        }
       }
     }
     &_bottom {
       padding: 0 0 22px;
+      @include mixins.tablets {
+        padding: 0 0 60px;
+        grid-template-columns: 1fr 455px;
+      }
+      @include mixins.desktop-wide {
+        padding: 0 0 60px;
+        grid-template-columns: 1fr 730px;
+      }
       &::before {
         content: '';
         background-color: #25E197;
         min-height: 124px;
         @include mixins.rounded-block(4px);
+        @include mixins.tablets {
+          @include mixins.rounded-block(10px);
+        }
       }
     }
   }
@@ -29,71 +52,5 @@
     object-fit: cover;
     @include mixins.rounded-block(4px);
   }
-  @include mixins.tablets {
-    &_place {
-      &_top {
-        grid-template-columns: 448px 1fr;
-        &::after {
-          @include mixins.rounded-block(10px);
-        }
-      }
-      &_bottom {
-        padding: 0 0 60px;
-        grid-template-columns: 1fr 455px;
-        &::before {
-          @include mixins.rounded-block(10px);
-        }
-      }
-    }
-  }
-  @include mixins.desktop-wide {
-    margin: 0 -130px;
-    &_place {
-      &_top {
-        padding: 60px 0 20px;
-      }
-      &_bottom {
-        padding: 0 0 60px;
-        grid-template-columns: 1fr 730px;
-      }
-    }
-  }
 }
 
-
-// .photo-grid {
-//   padding: 20px 0;
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   gap: 20px;
-//   &::before {
-//     content: '';
-//     background-color: #FFD233;
-//     min-height: 67px;
-//     @include mixins.rounded-block(4px);
-//     order: 2;
-//   }
-//   &::after {
-//     content: '';
-//     background-color: #25E197;
-//     min-height: 124px;
-//     @include mixins.rounded-block(4px);
-//     order: 3;
-//   }
-//   &__image {
-//     width: 100%;
-//     object-fit: cover;
-//     @include mixins.rounded-block(4px);
-//     &_place {
-//       &_top {
-//         order: 1;
-//       }
-//       &_bottom {
-//         order: 4;
-//       }
-//     }
-//   }
-//   @include mixins.tablets {
-//     grid-template-columns: 448px 1fr;
-//   }
-// }

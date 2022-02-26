@@ -15,6 +15,12 @@
     height: 50px;
     width: 100%;
     @include mixins.flex();
+    @include mixins.tablets {
+      min-width: 569px;
+    }
+    @include mixins.desktop-wide {
+      width: auto;
+    }
   }
   &__input {
     height: 100%;
@@ -32,12 +38,23 @@
     line-height: 1;
     height: 100%;
     min-width: 50px;
+    @include mixins.tablets {
+      min-width: 221px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
     &:before {
       content: '\270C';
+      @include mixins.tablets {
+        content: 'Отремонтируйте камеру \270C';
+      }
     }
     &_active {
       &:before {
         content: '\1F44D';
+        @include mixins.tablets {
+          content: 'Круто, спасибо за доверие!';
+        }
       }
     }
   }
@@ -46,36 +63,15 @@
     margin: 0;
     font-size: 12px;
     line-height: 1.5;
-  }
-  @include mixins.tablets {
-    &__field {
-      min-width: 569px;
-    }
-    &__button {
-      min-width: 221px;
-      font-size: 14px;
-      line-height: 1.7;
-      &:before {
-        content: 'Отремонтируйте камеру \270C';
-      }
-      &_active {
-        &:before {
-          content: 'Круто, спасибо за доверие!';
-        }
-      }
-    }
-    &__tip {
+    @include mixins.tablets {
       margin-left: 10px;
-      &_place {
-        &_footer {
+    }
+    &_place {
+      &_footer {
+        @include mixins.tablets {
           margin: 5px 0 0;
         }
       }
-    }
-  }
-  @include mixins.desktop-wide {
-    &__field {
-      width: auto;
     }
   }
 }

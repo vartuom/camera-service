@@ -8,6 +8,11 @@
   line-height: 1.4;
   color: colors.$text-primary;
   @include mixins.flex(16px);
+  @include mixins.tablets {
+    font-size: 22px;
+    line-height: 1.4;
+    gap: 22px;
+  }
   &:after {
     color: colors.$primary;
     font-size: 12px;
@@ -16,12 +21,5 @@
     background-color: colors.$accent;
     padding: 4px 8px;
     @include mixins.rounded-block(4px);
-  }
-  @include mixins.tablets {
-    font-size: 22px;
-    line-height: 1.4;
-    gap: 22px;
-  }
-  @include mixins.desktop-wide {
   }
 }
