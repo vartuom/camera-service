@@ -82,8 +82,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -646,8 +645,7 @@ template {
 }
 .photo-row__image {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -688,8 +686,6 @@ template {
 
 .card {
   background-color: #1c1c1e;
-  height: -webkit-min-content;
-  height: -moz-min-content;
   height: min-content;
   box-sizing: border-box;
   position: relative;
@@ -736,7 +732,6 @@ template {
 @media screen and (min-width: 768px) {
   .card__header_size_s {
     font-size: 18px;
-    line-height: 1;
     margin: 0 0 38px;
   }
 }
@@ -782,8 +777,6 @@ template {
   align-items: flex-start;
   gap: 0;
   flex-direction: column;
-  height: -webkit-min-content;
-  height: -moz-min-content;
   height: min-content;
 }
 @media screen and (min-width: 768px) {
@@ -979,4 +972,6 @@ template {
   .footer__copyright {
     align-self: flex-end;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */

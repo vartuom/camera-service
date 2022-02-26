@@ -1,9 +1,6 @@
 //------------------------------ var\const ----------------------------//
-//page
 const content = document.querySelector('.page');
-const elMailForm = content.querySelector('.mail-form');
-const elSubmitButton = elMailForm.querySelector('.mail-form__button');
-const elMailInput = elMailForm.querySelector('.mail-form__input');
+const mailForms = content.querySelectorAll('.mail-form');
 //------------------------------ functions ----------------------------//
 
 // function validateMail(mail) {
@@ -11,14 +8,16 @@ const elMailInput = elMailForm.querySelector('.mail-form__input');
 //   return regex.test(mail);
 // }
 
-function handleInput(e) {
-  elSubmitButton.classList.remove('mail-form__button_active');
+function handleInput(evt) {
+  evt.target.form[2].classList.remove('mail-form__button_active');
 }
-function handleMailSubmit (e) {
-  e.preventDefault();
-  elSubmitButton.classList.add('mail-form__button_active');
+function handleMailSubmit (evt) {
+  evt.preventDefault();
+  evt.submitter.classList.add('mail-form__button_active');
 }
 //------------------------------ listeners ----------------------------//
-elMailInput.addEventListener('input', handleInput);
-elMailForm.addEventListener('submit', handleMailSubmit);
+mailForms.forEach((mailForm) => {
+  mailForm.addEventListener('submit', handleMailSubmit);
+  mailForm[1].addEventListener('input', handleInput);
+});
 //------------------------------ execution ----------------------------//
