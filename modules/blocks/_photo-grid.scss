@@ -15,7 +15,7 @@
       }
     }
     &_bottom {
-      padding: 0;
+      padding: 0 0 22px;
       &::before {
         content: '';
         background-color: #25E197;
@@ -33,9 +33,16 @@
     &_place {
       &_top {
         grid-template-columns: 448px 1fr;
+        &::after {
+          @include mixins.rounded-block(10px);
+        }
       }
       &_bottom {
+        padding: 0 0 60px;
         grid-template-columns: 1fr 455px;
+        &::before {
+          @include mixins.rounded-block(10px);
+        }
       }
     }
   }

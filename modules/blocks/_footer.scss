@@ -16,9 +16,20 @@
     line-height: 1.5;
   }
   @include mixins.tablets {
+    max-width: 569px;
+    gap: 84px;
     padding: 60px 0;
+    &__wrapper {
+      gap: 60px;
+    }
   }
   @include mixins.desktop-wide {
+    gap: 81px;
+    max-width: 100%;
+    &__wrapper {
+      width: 100%;
+      @include mixins.flex(40px, row, space-between, flex-end);
+    }
     &__copyright {
       align-self: flex-end;
     }

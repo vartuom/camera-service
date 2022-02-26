@@ -17,4 +17,11 @@
     padding: 4px 8px;
     @include mixins.rounded-block(4px);
   }
+  @include mixins.tablets {
+    font-size: 22px;
+    line-height: 1.4;
+    gap: 22px;
+  }
+  @include mixins.desktop-wide {
+  }
 }

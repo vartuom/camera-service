@@ -5,6 +5,7 @@
   color: colors.$text-primary;
   @include mixins.font-style-roboto();
   @include mixins.flex(10px, column, $align: flex-start);
+  width: 100%;
   &__field {
     margin: 0;
     border: 0;
@@ -60,6 +61,14 @@
       &_active {
         &:before {
           content: 'Круто, спасибо за доверие!';
+        }
+      }
+    }
+    &__tip {
+      margin-left: 10px;
+      &_place {
+        &_footer {
+          margin: 5px 0 0;
         }
       }
     }
