@@ -10,7 +10,6 @@
   @include mixins.flex(16px);
   @include mixins.tablets {
     font-size: 22px;
-    line-height: 1.4;
     gap: 22px;
   }
   &:after {

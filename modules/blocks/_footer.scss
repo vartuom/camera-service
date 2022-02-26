@@ -20,7 +20,6 @@
       gap: 60px;
     }
     @include mixins.desktop-wide {
-      width: 100%;
       @include mixins.flex(40px, row, space-between, flex-end);
     }
   }
@@ -30,6 +29,7 @@
     color: colors.$button;
     font-size: 12px;
     line-height: 1.5;
+    white-space: nowrap;
     @include mixins.desktop-wide {
       align-self: flex-end;
     }
