@@ -1,6 +1,6 @@
 @use '../mixins/mixins';
 
-.photo-grid {
+.photo-row {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;

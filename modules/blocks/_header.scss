@@ -1,0 +1,7 @@
+@use '../mixins/mixins';
+
+.header {
+  @include mixins.desktop-wide {
+    padding-left: 6px;
+  }
+}

@@ -9,4 +9,9 @@
   color: colors.$text-primary;
   text-align: center;
   letter-spacing: 0.4px;
+  transition: opacity 0.1s linear;
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
 }

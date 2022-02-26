@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ремонт фотоаппаратов</title>
+  <title>C-Works</title>
   <link rel="stylesheet" href="./pages/index.css">
 </head>
 
 <body class="page">
   <div class="root">
-    <header>
+    <header class="header">
       <p class="logo">C-Works</p>
     </header>
     <main class="content">
@@ -20,17 +20,17 @@
           фотоаппаратов</p>
         <form class="mail-form" name="mail-form">
           <fieldset class="mail-form__field">
-            <input class="mail-form__input" name="mail-input">
+            <input class="mail-form__input" type="email" name="mail-input">
             <button type="submit" class="button mail-form__button" name="submit-mail"></button>
           </fieldset>
           <p class="mail-form__tip">Напишите нам и мы свяжемся с вами.</p>
         </form>
       </section>
-      <section class="photo-grid photo-grid_place_top">
-        <img class="photo-grid__image" src="images/leica-top.png">
+      <section class="photo-row photo-row_place_top">
+        <img class="photo-row__image" src="images/leica-top.png">
       </section>
-      <section class="photo-grid photo-grid_place_bottom">
-        <img class="photo-grid__image" src="images/leica-front.png">
+      <section class="photo-row photo-row_place_bottom">
+        <img class="photo-row__image" src="images/leica-front.png">
       </section>
       <section class="content-container">
         <p class="content-container__paragraph">
@@ -104,7 +104,7 @@
       <div class="footer__wrapper">
         <form class="mail-form" name="mail-form">
           <fieldset class="mail-form__field">
-            <input class="mail-form__input" name="mail-input">
+            <input class="mail-form__input" type="email" name="mail-input">
             <button type="submit" class="button mail-form__button" name="submit-mail"></button>
           </fieldset>
           <p class="mail-form__tip mail-form__tip_place_footer">Напишите нам и мы свяжемся с вами.</p>

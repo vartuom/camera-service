@@ -28,9 +28,18 @@
     border: 0;
     background-color: colors.$secondary;
     color: inherit;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.4px;
+    padding-left: 16px;
+    &:hover {
+      background-color: colors.$secondary-on-hover;
+      cursor: pointer;
+    }
     &:focus {
       outline: 0;
       background-color: colors.$secondary-on-hover;
+      cursor: text;
     }
   }
   &__button {
