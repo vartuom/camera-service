@@ -29,7 +29,7 @@
     background-color: colors.$secondary;
     color: inherit;
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 24px;
     letter-spacing: 0.4px;
     padding-left: 16px;
     &:hover {
@@ -44,13 +44,13 @@
   }
   &__button {
     font-size: 10px;
-    line-height: 1;
+    line-height: 10px;
     height: 100%;
     min-width: 50px;
     @include mixins.tablets {
       min-width: 221px;
       font-size: 14px;
-      line-height: 1.7;
+      line-height: 24px;
     }
     &:before {
       content: '\270C';
@@ -71,7 +71,7 @@
     color: colors.$button;
     margin: 0;
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 18px;
     @include mixins.tablets {
       margin-left: 10px;
     }

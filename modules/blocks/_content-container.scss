@@ -22,13 +22,14 @@
     font-weight: inherit;
     color: colors.$text-primary;
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 18px;
     @include mixins.tablets {
       font-size: 20px;
+      line-height: 30px;
     }
     @include mixins.desktop-wide {
       font-size: 32px;
-      line-height: 1.3;
+      line-height: 40px;
     }
     &_place {
       &_top {
@@ -55,13 +56,14 @@
     margin: 0;
     color: colors.$text-secondary;
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 18px;
     @include mixins.tablets {
       font-size: 20px;
+      line-height: 30px;
     }
     @include mixins.desktop-wide {
       font-size: 32px;
-      line-height: 1.3;
+      line-height: 40px;
     }
   }
   &__button {
@@ -71,10 +73,11 @@
     padding: 16px;
     @include mixins.rounded-block(8px);
     font-size: 12px;
-    line-height: 1.3;
+    line-height: 18px;
     @include mixins.tablets {
       margin: 15px 0 40px;
       font-size: 14px;
+      line-height: 24px;
     }
     @include mixins.desktop-wide {
       margin: 25px 0 48px;
