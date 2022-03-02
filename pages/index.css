@@ -917,7 +917,7 @@ template {
 }
 
 .footer {
-  padding: 30px 0 20px;
+  padding: 30px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -928,7 +928,7 @@ template {
   .footer {
     max-width: 569px;
     gap: 84px;
-    padding: 60px 0;
+    padding: 60px 0 0;
   }
 }
 @media screen and (min-width: 1440px) {
