@@ -3,10 +3,9 @@
 
 .card {
   background-color: colors.$secondary;
-  height: min-content;
   box-sizing: border-box;
-  position: relative;
   transition: background-color 0.1s linear;
+  @include mixins.flex($direction:column, $align:start);
   &:hover {
     background-color: colors.$secondary-on-hover;
     cursor: pointer;
@@ -23,10 +22,10 @@
     &_m {
       @include mixins.rounded-block(16px);
       min-height: 282px;
-      padding: 20px 20px 40px;
+      padding: 20px;
       @include mixins.tablets {
         min-height: 364px;
-        padding: 40px 40px 80px;
+        padding: 40px;
       }
     }
   }
@@ -80,6 +79,7 @@
         }
       }
       &_m {
+        min-height: 116px;
         @include mixins.tablets {
           font-size: 32px;
           line-height: 40px;
@@ -88,16 +88,15 @@
     }
   }
   &__price {
+    margin: 20px 0 0;
+    @include mixins.font-style-roboto(400);
+    font-size: 12px;
+    line-height: 18px;
     color: colors.$accent;
-    display:  block;
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
     @include mixins.tablets {
+      margin: 40px 0 0;
       font-size: 14px;
       line-height: 14px;
-      left: 40px;
-      bottom: 40px;
     }
   }
 }

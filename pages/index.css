@@ -401,7 +401,7 @@ template {
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
-  line-height: 1.4;
+  line-height: 28px;
   color: #ffffff;
   display: flex;
   justify-content: flex-start;
@@ -412,13 +412,14 @@ template {
 @media screen and (min-width: 768px) {
   .logo {
     font-size: 22px;
+    line-height: 30px;
     gap: 22px;
   }
 }
 .logo:after {
   color: #000000;
   font-size: 12px;
-  line-height: 1;
+  line-height: 12px;
   content: "мы открылись";
   background-color: #25e197;
   padding: 4px 8px;
@@ -446,36 +447,38 @@ template {
 .lead__header {
   margin: 0;
   font-size: 50px;
-  line-height: 1.2;
+  line-height: 60px;
   font-weight: inherit;
 }
 @media screen and (min-width: 768px) {
   .lead__header {
     font-size: 70px;
+    line-height: 90px;
   }
 }
 @media screen and (min-width: 1440px) {
   .lead__header {
     font-size: 112px;
-    line-height: 1;
+    line-height: 112px;
   }
 }
 .lead__paragraph {
   margin: 10px 0 260px;
   font-size: 30px;
-  line-height: 1.3;
+  line-height: 38px;
 }
 @media screen and (min-width: 768px) {
   .lead__paragraph {
     margin: 0 0 470px;
     font-size: 50px;
+    line-height: 60px;
   }
 }
 @media screen and (min-width: 1440px) {
   .lead__paragraph {
-    margin: 13px 0 227px;
+    margin: 18px 0 232px;
     font-size: 80px;
-    line-height: 1;
+    line-height: 70px;
   }
 }
 
@@ -522,7 +525,7 @@ template {
   background-color: #1c1c1e;
   color: inherit;
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 24px;
   letter-spacing: 0.4px;
   padding-left: 16px;
 }
@@ -537,7 +540,7 @@ template {
 }
 .mail-form__button {
   font-size: 10px;
-  line-height: 1;
+  line-height: 10px;
   height: 100%;
   min-width: 50px;
 }
@@ -545,7 +548,7 @@ template {
   .mail-form__button {
     min-width: 221px;
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 24px;
   }
 }
 .mail-form__button:before {
@@ -568,7 +571,7 @@ template {
   color: #47474C;
   margin: 0;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 18px;
 }
 @media screen and (min-width: 768px) {
   .mail-form__tip {
@@ -657,6 +660,7 @@ template {
   margin: 0;
   display: grid;
   gap: 20px;
+  align-items: start;
 }
 .cards-grid_size_s {
   grid-template-columns: 1fr;
@@ -687,10 +691,13 @@ template {
 
 .card {
   background-color: #1c1c1e;
-  height: min-content;
   box-sizing: border-box;
-  position: relative;
   transition: background-color 0.1s linear;
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 0;
+  flex-direction: column;
 }
 .card:hover {
   background-color: #232327;
@@ -711,12 +718,12 @@ template {
   border-radius: 16px;
   overflow: hidden;
   min-height: 282px;
-  padding: 20px 20px 40px;
+  padding: 20px;
 }
 @media screen and (min-width: 768px) {
   .card_size_m {
     min-height: 364px;
-    padding: 40px 40px 80px;
+    padding: 40px;
   }
 }
 .card__header {
@@ -727,12 +734,11 @@ template {
   font-weight: 500;
   font-style: normal;
   font-size: 18px;
-  line-height: 1;
+  line-height: 18px;
   margin: 0 0 36px;
 }
 @media screen and (min-width: 768px) {
   .card__header_size_s {
-    font-size: 18px;
     margin: 0 0 38px;
   }
 }
@@ -741,13 +747,12 @@ template {
   font-weight: 400;
   font-style: normal;
   font-size: 24px;
-  line-height: 1.3;
+  line-height: 32px;
   margin: 0 0 28px;
 }
 @media screen and (min-width: 768px) {
   .card__header_size_m {
     font-size: 32px;
-    line-height: 1;
     margin: 0 0 40px;
   }
 }
@@ -758,7 +763,7 @@ template {
   margin: 0 0 10px;
   color: #8e8e98;
   font-size: 18px;
-  line-height: 1;
+  line-height: 18px;
 }
 @media screen and (min-width: 768px) {
   .card__subheader {
@@ -772,7 +777,7 @@ template {
   font-style: normal;
   color: #8e8e98;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 18px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -783,28 +788,32 @@ template {
 @media screen and (min-width: 768px) {
   .card__paragraph_size_s {
     font-size: 15px;
-    line-height: 1.3;
+    line-height: 19px;
   }
+}
+.card__paragraph_size_m {
+  min-height: 116px;
 }
 @media screen and (min-width: 768px) {
   .card__paragraph_size_m {
     font-size: 32px;
-    line-height: 1.2;
+    line-height: 40px;
   }
 }
 .card__price {
+  margin: 20px 0 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 18px;
   color: #25e197;
-  display: block;
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .card__price {
+    margin: 40px 0 0;
     font-size: 14px;
-    line-height: 1;
-    left: 40px;
-    bottom: 40px;
+    line-height: 14px;
   }
 }
 
@@ -838,17 +847,18 @@ template {
   font-weight: inherit;
   color: #ffffff;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 18px;
 }
 @media screen and (min-width: 768px) {
   .content-container__header {
     font-size: 20px;
+    line-height: 30px;
   }
 }
 @media screen and (min-width: 1440px) {
   .content-container__header {
     font-size: 32px;
-    line-height: 1.3;
+    line-height: 40px;
   }
 }
 .content-container__header_place_top {
@@ -874,24 +884,25 @@ template {
 }
 @media screen and (min-width: 1440px) {
   .content-container__header_place_bottom {
-    margin-top: 55px;
+    margin-top: 60px;
   }
 }
 .content-container__paragraph {
   margin: 0;
   color: #8e8e98;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 18px;
 }
 @media screen and (min-width: 768px) {
   .content-container__paragraph {
     font-size: 20px;
+    line-height: 30px;
   }
 }
 @media screen and (min-width: 1440px) {
   .content-container__paragraph {
     font-size: 32px;
-    line-height: 1.3;
+    line-height: 40px;
   }
 }
 .content-container__button {
@@ -902,17 +913,18 @@ template {
   border-radius: 8px;
   overflow: hidden;
   font-size: 12px;
-  line-height: 1.3;
+  line-height: 18px;
 }
 @media screen and (min-width: 768px) {
   .content-container__button {
     margin: 15px 0 40px;
     font-size: 14px;
+    line-height: 24px;
   }
 }
 @media screen and (min-width: 1440px) {
   .content-container__button {
-    margin: 25px 0 48px;
+    margin: 30px 0 48px;
   }
 }
 
