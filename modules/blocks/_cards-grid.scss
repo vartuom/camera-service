@@ -1,0 +1,30 @@
+@use '../mixins/mixins';
+
+.cards-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 20px;
+  align-items: start;
+  &_size {
+    &_s {
+      grid-template-columns: 1fr;
+      @include mixins.tablets {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include mixins.desktop-wide {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
+    &_m {
+      grid-template-columns: 1fr;
+      @include mixins.tablets {
+        grid-template-columns: 1fr;
+      }
+      @include mixins.desktop-wide {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}

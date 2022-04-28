@@ -1,0 +1,25 @@
+@use '../mixins/mixins';
+@use '../variables/colors';
+
+.logo {
+  margin: 0;
+  @include mixins.font-style-roboto();
+  font-size: 20px;
+  line-height: 28px;
+  color: colors.$text-primary;
+  @include mixins.flex(16px);
+  @include mixins.tablets {
+    font-size: 22px;
+    line-height: 30px;
+    gap: 22px;
+  }
+  &:after {
+    color: colors.$primary;
+    font-size: 12px;
+    line-height: 12px;
+    content: 'мы открылись';
+    background-color: colors.$accent;
+    padding: 4px 8px;
+    @include mixins.rounded-block(4px);
+  }
+}

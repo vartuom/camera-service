@@ -1,0 +1,37 @@
+@use '../mixins/mixins';
+@use '../variables/colors';
+
+.footer {
+  padding: 30px 0 0;
+  @include mixins.flex(184px, column, space-between, flex-start);
+  @include mixins.tablets {
+    max-width: 569px;
+    gap: 84px;
+    padding: 60px 0 0;
+  }
+  @include mixins.desktop-wide {
+    gap: 81px;
+    max-width: 100%;
+  }
+  &__wrapper {
+    width: 100%;
+    @include mixins.flex(40px, column, space-between, flex-start);
+    @include mixins.tablets {
+      gap: 60px;
+    }
+    @include mixins.desktop-wide {
+      @include mixins.flex(40px, row, space-between, flex-end);
+    }
+  }
+  &__copyright {
+    margin: 0;
+    @include mixins.font-style-roboto();
+    color: colors.$button;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: nowrap;
+    @include mixins.desktop-wide {
+      align-self: flex-end;
+    }
+  }
+}

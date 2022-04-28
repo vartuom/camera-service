@@ -1,0 +1,56 @@
+@use '../variables/media';
+
+@mixin desktop-wide {
+  @media screen and (min-width: media.$desktop-wide) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: media.$desktop) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: media.$laptop) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (min-width: media.$tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (min-width: media.$phones) {
+    @content;
+  }
+}
+
+@mixin phones-small {
+  @media screen and (min-width: media.$phones-small) {
+    @content;
+  }
+}
+
+@mixin font-style-roboto($weight:400) {
+  font-family: 'Roboto', sans-serif;
+  font-weight: $weight;
+  font-style: normal;
+}
+
+@mixin flex($gap:0, $direction:row, $justify:flex-start, $align:center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  flex-direction: $direction;
+}
+
+@mixin rounded-block($r:0) {
+  border-radius: $r;
+  overflow: hidden;
+}

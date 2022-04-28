@@ -1,0 +1,17 @@
+@use '../mixins/mixins';
+
+.root {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1440px;
+  display: grid;
+  margin: 0 auto;
+  padding: 24px 20px 20px;
+  box-sizing: border-box;
+  @include mixins.tablets {
+    padding: 60px;
+  }
+  @include mixins.desktop-wide {
+    padding: 60px 160px;
+  }
+}

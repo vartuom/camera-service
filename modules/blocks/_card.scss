@@ -1,0 +1,102 @@
+@use '../mixins/mixins';
+@use '../variables/colors';
+
+.card {
+  background-color: colors.$secondary;
+  box-sizing: border-box;
+  transition: background-color 0.1s linear;
+  @include mixins.flex($direction:column, $align:start);
+  &:hover {
+    background-color: colors.$secondary-on-hover;
+    cursor: pointer;
+  }
+  &_size {
+    &_s {
+      @include mixins.rounded-block(10px);
+      min-height: 148px;
+      padding: 20px;
+      @include mixins.tablets {
+        min-height: 153px;
+      }
+    }
+    &_m {
+      @include mixins.rounded-block(16px);
+      min-height: 282px;
+      padding: 20px;
+      @include mixins.tablets {
+        min-height: 364px;
+        padding: 40px;
+      }
+    }
+  }
+  &__header {
+    color: colors.$text-primary;
+    &_size {
+      &_s{
+        @include mixins.font-style-roboto(500);
+        font-size: 18px;
+        line-height: 18px;
+        margin: 0 0 36px;
+        @include mixins.tablets {
+          margin: 0 0 38px;
+        }
+      }
+      &_m{
+        @include mixins.font-style-roboto(400);
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0 0 28px;
+        @include mixins.tablets {
+          font-size: 32px;
+          margin: 0 0 40px;
+        }
+      }
+    }
+  }
+  &__subheader {
+    @include mixins.font-style-roboto(400);
+    margin: 0 0 10px;
+    color: colors.$text-secondary;
+    font-size: 18px;
+    line-height: 18px;
+    @include mixins.tablets {
+      margin: 0 0 20px;
+    }
+  }
+  &__paragraph {
+    margin: 0;
+    @include mixins.font-style-roboto(400);
+    color: colors.$text-secondary;
+    font-size: 12px;
+    line-height: 18px;
+    @include mixins.flex(0, column, space-between, flex-start);
+    height: min-content;
+    &_size {
+      &_s {
+        @include mixins.tablets {
+          font-size: 15px;
+          line-height: 19px;
+        }
+      }
+      &_m {
+        min-height: 116px;
+        @include mixins.tablets {
+          font-size: 32px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+  &__price {
+    margin: 20px 0 0;
+    @include mixins.font-style-roboto(400);
+    font-size: 12px;
+    line-height: 18px;
+    color: colors.$accent;
+    @include mixins.tablets {
+      margin: 40px 0 0;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+}
